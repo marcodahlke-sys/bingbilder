@@ -23,7 +23,7 @@ body.theme-dark {
   --danger-text: #b00020;
   --image-bg: #1a2230;
   --shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
-  --body-overlay: linear-gradient(180deg, rgba(7, 10, 16, 0.52) 0%, rgba(7, 10, 16, 0.62) 100%);
+  --body-overlay: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
   --footer-border: rgba(255, 255, 255, 0.18);
   --footer-text: rgba(255, 255, 255, 0.82);
   --scrollbar-track: rgba(18, 24, 34, 0.95);
