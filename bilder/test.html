@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zufälliger Farbverlauf mit Bild</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      transition: background 1s ease;
+    }
+
+    .center-image {
+      width: 320px;
+      max-width: 80vw;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      background: rgba(255,255,255,0.15);
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <img
+    alt="Bild in der Mitte"
+    src="banner.php?w=800&h=120&count=6"
+  >
+
+  <script>
+    function randomColor() {
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    function randomGradient() {
+      const angle = Math.floor(Math.random() * 360);
+      const color1 = randomColor();
+      const color2 = randomColor();
+      const color3 = randomColor();
+      document.body.style.background =
+        `linear-gradient(${angle}deg, ${color1}, ${color2}, ${color3})`;
+    }
+
+    randomGradient();
+  </script>
+</body>
+</html>
